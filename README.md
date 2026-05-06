@@ -1,11 +1,38 @@
-<div align="center">
+# Nexus Multi-App Suite
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+An interconnected digital ecosystem featuring a professional portfolio, a persistent e-commerce store, and a centralized authentication system.
 
-  <h1>Built with AI Studio</h2>
+## Project Structure
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+1. **Portfolio** (`/portfolio`)
+   - Dynamic project listing.
+   - Contact form with backend persistence.
+   - Admin Dashboard for CRUD operations on projects and viewing submissions.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+2. **E-commerce Store** (`/store`)
+   - Product catalog.
+   - **Persistent Cart**: Synced to Firestore for authenticated users.
+   - Checkout flow with order confirmation.
 
-</div>
+3. **Auth System** (`/login`, `/register`)
+   - JWT-based (Firebase) authentication.
+   - Shared user profiles across all apps.
+   - Protected routes and role-based permissions.
+
+## Admin Access
+
+To access the Admin Dashboard:
+1. Register a new account.
+2. In the Firestore console, find your user document in the `users` collection.
+3. Change the `role` field from `"user"` to `"admin"`.
+4. Refresh the app; an "Admin" link will appear in the navigation.
+
+## Tech Stack
+
+- **Frontend**: React, Tailwind CSS, Motion (Animations), Lucide Icons.
+- **Backend**: Node.js/Express (Vite middleware integration).
+- **Database/Auth**: Firebase Firestore & Firebase Auth.
+
+## Getting Started
+
+The app is fully configured and ready for production. All data is persisted live to Google Cloud.
